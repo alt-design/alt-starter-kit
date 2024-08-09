@@ -1,0 +1,15 @@
+<div class="alt_two_column py-10 lg:py-20">
+    <div class="container mx-auto px-6 flex {{ if swap_sides }} flex-wrap-reverse {{ else }} flex-wrap {{ /if }} lg:flex-nowrap justify-between items-center lg:space-x-20">
+        {{ if !swap_sides }}
+        <img class="w-full lg:w-1/2 mb-10 lg:mb-0"
+            src="{{ glide :src='image:url' format='webp' width='1000'}}" loading="lazy" alt="{{image:alt}}">
+        {{ /if }}
+        <div class="w-full lg:w-1/2 wysiwyg">
+            {{ text }}
+        </div>
+        {{ if swap_sides }}
+        <img class="w-full lg:w-1/2 mb-10 lg:mb-0"
+             src="{{ glide :src='image:url' format='webp' width='1000'}}" loading="lazy" alt="{{image:alt}}">
+        {{ /if }}
+    </div>
+</div>

@@ -1,0 +1,9 @@
+{
+    "name": "my-vendor-name/alt-starter-kit",
+    "extra": {
+        "statamic": {
+            "name": "Alt Starter Kit",
+            "description": "Alt Starter Kit starter kit"
+        }
+    }
+}

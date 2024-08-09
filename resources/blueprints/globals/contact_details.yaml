@@ -1,0 +1,54 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: telephone
+            field:
+              type: text
+              display: Telephone
+          -
+            handle: email
+            field:
+              type: text
+              display: Email
+          -
+            handle: address
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: Address
+          -
+            handle: facebook
+            field:
+              type: text
+              display: Facebook
+          -
+            handle: twitter
+            field:
+              type: text
+              display: Twitter
+          -
+            handle: instagram
+            field:
+              type: text
+              display: Instagram
+          -
+            handle: linkedin
+            field:
+              type: text
+              display: LinkedIn
+          -
+            handle: icon_colour
+            field:
+              type: color
+              display: 'Icon Colour'
+              width: 50
+          -
+            handle: icon_colour_on_hover
+            field:
+              type: color
+              display: 'Icon Colour on Hover'
+              width: 50

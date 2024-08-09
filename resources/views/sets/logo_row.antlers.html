@@ -1,0 +1,20 @@
+<div class="alt_logo_row py-10 lg:py-20">
+    <div class="container mx-auto px-6">
+        <div class="glide overflow-hidden"
+             data-glide-options="{type: 'carousel', autoplay: 8000, startAt: 0, perView: 6, gap: 20, breakpoints: {1024: {perView: 2}}}"
+             data-glide-bullets="true">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides flex items-center">
+                    {{ logos }}
+                    <li class="glide__slide">
+                        <img class="w-full h-auto object-cover mb-4"
+                                 src="{{ glide :src='url' format='webp' width='400'}}" loading="lazy" alt="{{alt}}">
+                    </li>
+                    {{ /logos }}
+                </ul>
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

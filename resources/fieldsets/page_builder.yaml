@@ -1,0 +1,217 @@
+title: 'Page Builder'
+fields:
+  -
+    handle: page_builder
+    field:
+      type: replicator
+      display: 'Page Builder'
+      sets:
+        page_builder_set_group:
+          display: 'Page Builder Set Group'
+          sets:
+            hero:
+              display: Hero
+              fields:
+                -
+                  handle: background_type
+                  field:
+                    options:
+                      image: Image
+                      video: Video
+                    type: select
+                    display: 'Background Type'
+                -
+                  handle: gallery
+                  field:
+                    container: assets
+                    type: assets
+                    display: Gallery
+                    if:
+                      background_type: 'equals image'
+                -
+                  handle: video
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Video
+                    if:
+                      background_type: 'equals video'
+                -
+                  handle: background_tint
+                  field:
+                    type: toggle
+                    display: 'Background Tint'
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: subtitle
+                  field:
+                    type: text
+                    display: Subtitle
+                -
+                  import: button
+            page_header:
+              display: 'Page Header'
+              fields:
+                -
+                  handle: gallery
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Gallery
+                -
+                  handle: background_tint
+                  field:
+                    type: toggle
+                    display: 'Background Tint'
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: subtitle
+                  field:
+                    type: text
+                    display: Subtitle
+                -
+                  import: button
+            wysiwyg:
+              display: Wysiwyg
+              fields:
+                -
+                  handle: content
+                  field:
+                    remove_empty_nodes: false
+                    type: bard
+                    display: Content
+                    buttons:
+                      - h2
+                      - h3
+                      - h4
+                      - bold
+                      - italic
+                      - underline
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - quote
+                      - anchor
+                      - image
+                      - table
+                      - alignleft
+                      - aligncenter
+                      - alignright
+                      - alignjustify
+            full_width_image:
+              display: 'Full Width Image'
+              fields:
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Image
+            two_column:
+              display: 'Two Column'
+              fields:
+                -
+                  handle: text
+                  field:
+                    buttons:
+                      - h2
+                      - h3
+                      - h4
+                      - bold
+                      - italic
+                      - underline
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - quote
+                      - anchor
+                      - image
+                      - table
+                      - alignleft
+                      - aligncenter
+                      - alignright
+                      - alignjustify
+                    remove_empty_nodes: false
+                    type: bard
+                    display: Text
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Image
+                -
+                  handle: swap_sides
+                  field:
+                    type: toggle
+                    display: 'Swap Sides'
+            three_column:
+              display: 'Three Column'
+              fields:
+                -
+                  handle: columns
+                  field:
+                    max_sets: 3
+                    type: replicator
+                    display: Columns
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        sets:
+                          column:
+                            display: Column
+                            fields:
+                              -
+                                handle: image
+                                field:
+                                  max_files: 1
+                                  container: assets
+                                  type: assets
+                                  display: Image
+                              -
+                                handle: title
+                                field:
+                                  type: text
+                                  display: Title
+                              -
+                                handle: content
+                                field:
+                                  type: textarea
+                                  display: Content
+                              -
+                                import: button
+            logo_row:
+              display: 'Logo Row'
+              fields:
+                -
+                  handle: logos
+                  field:
+                    container: assets
+                    type: assets
+                    display: Logos
+            form_row:
+              display: 'Form Row'
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: form
+                  field:
+                    max_items: 1
+                    type: form
+                    display: Form

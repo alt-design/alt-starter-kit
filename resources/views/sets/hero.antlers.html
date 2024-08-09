@@ -1,0 +1,34 @@
+<div class="alt_hero relative h-screen-adj w-screen">
+    {{ if background_type == 'video' }}
+    <video  autoplay loop muted src="{{ video }}" class="h-full w-full object-cover"></video>
+    {{ else }}
+    {{ if (gallery | count == 1) }}
+    <img src="{{ glide :src='gallery:0:url' format='webp' width='2500'}}" alt="{{ gallery:0:alt }}" class="object-cover h-full w-full" loading="eager">
+    {{ else }}
+    <div class="glide h-full w-full" data-glide-options="{type: 'carousel', autoplay: 8000, startAt: 0, perView: 1}">
+        <div class="glide__track h-full" data-glide-el="track">
+            <ul class="glide__slides flex h-full">
+                {{ gallery }}
+                <li class="glide__slide">
+                    <img src="{{ glide :src="url" format="webp" width='2500'}}" alt="{{ alt }}" class="h-full w-full object-cover " {{ if first }} loading="eager" {{ else }} loading="lazy" {{ /if }}>
+                </li>
+                {{ /gallery }}
+            </ul>
+        </div>
+    </div>
+    {{ /if }}
+    {{ /if }}
+
+
+    <div class="absolute inset-0 {{ if background_tint }} background-tint {{ /if }}">
+        <div class="container mx-auto px-6 py-10 flex flex-col justify-end lg:justify-center text-white h-full w-full">
+            <h1 class="text-6xl mb-4">{{ title }}</h1>
+            {{ if subtitle}}
+            <p class="text-2xl mb-6">{{ subtitle }}</p>
+            {{ /if }}
+            {{ if button_link }}
+            <a href="{{ button_link }}" aria-label="{{ button_text }}" class="button {{ class }}">{{ button_text }}</a>
+            {{ /if }}
+        </div>
+    </div>
+</div>

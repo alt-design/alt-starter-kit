@@ -1,0 +1,20 @@
+title: Button
+fields:
+  -
+    handle: button_text
+    field:
+      type: text
+      display: 'Button Text'
+      width: 33
+  -
+    handle: button_link
+    field:
+      type: text
+      display: 'Button Link'
+      width: 33
+  -
+    handle: class
+    field:
+      type: text
+      display: Class
+      width: 33

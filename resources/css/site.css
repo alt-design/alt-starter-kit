@@ -1,0 +1,107 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "parts/hamburger.css";
+
+[x-cloak] { display: none !important; }
+
+body:has(div.preventScroll){
+    overflow: hidden;
+    height: 100vh;
+}
+
+:root {
+    --navbar-height: 117px;
+}
+
+.spacer{
+    height: var(--navbar-height)
+}
+
+html {
+    scroll-padding-top: var(--navbar-height)
+}
+
+.h-screen-adj{
+    height: calc(100vh - var(--navbar-height));
+}
+
+.background-tint{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.button{
+    @apply py-2 px-4 border w-full max-w-[200px] text-center
+}
+
+.button-primary{
+    @apply bg-white text-black border-white
+}
+
+.button-primary:hover{
+    @apply bg-transparent text-white
+}
+
+.button-secondary{
+    @apply bg-black text-white border-black
+}
+
+.button-secondary:hover{
+    @apply bg-transparent text-black
+}
+
+.wysiwyg h2{
+    @apply text-3xl mb-2 font-semibold
+}
+
+.wysiwyg h3{
+    @apply text-2xl mb-2 font-semibold
+}
+
+.wysiwyg h4{
+    @apply text-xl mb-2 font-semibold
+}
+
+.wysiwyg p{
+    @apply text-lg mb-8 leading-8
+}
+
+.wysiwyg ul{
+    @apply list-disc ml-4
+}
+
+.wysiwyg ol{
+    @apply list-decimal ml-4
+}
+
+.wysiwyg li p{
+    @apply mb-0
+}
+
+.wysiwyg a{
+    @apply underline
+}
+.glide__bullets{
+    @apply flex justify-center space-x-3 mt-4
+}
+
+.glide__bullet{
+    @apply w-3 h-3 rounded-full bg-gray-500 opacity-50
+}
+
+.glide__bullet--active{
+    @apply opacity-100
+}
+
+.form-field-container {
+    @apply mb-4
+}
+
+.form-field-container label {
+    @apply text-lg mb-2
+}
+
+.form-field input, .form-field textarea {
+    @apply w-full p-2 border border-gray-300 placeholder-gray-300
+}

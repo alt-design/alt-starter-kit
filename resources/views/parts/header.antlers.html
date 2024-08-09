@@ -1,0 +1,68 @@
+<nav class="alt_header fixed top-0 left-0 w-screen bg-black text-white z-50">
+    <div class="container mx-auto px-6 py-7 flex justify-between items-center">
+        <a href="/" aria-label="Back to Homepage">
+            <img src="/images/alt_logo.svg" alt="{{ config:app:name }}" class="w-[100px]">
+            <!--                    <img src="{{ glide src='/images/logo.png' format='webp' width='100'}}" alt="{{ config:app:name }}" class="w-[100px]">-->
+        </a>
+        <ul class="links hidden lg:flex">
+            {{ nav:main_nav }}
+                {{ if children }}
+                <li class="relative group">
+                    <a href="{{ url }}" aria-label="{{ title }}" class="whitespace-nowrap px-10 py-7 hover:underline">{{ title }}</a>
+                    <ul class="absolute top-[100%] right-0 bg-black py-5 space-y-5 shadow-md mt-5 hidden group-hover:flex flex-col">
+                        {{ *recursive children* }}
+                    </ul>
+                </li>
+                {{ else }}
+                <li class="">
+                    <a href="{{ url }}" aria-label="{{ title }}" class="whitespace-nowrap px-10 py-7 hover:underline">{{ title }}</a>
+                </li>
+                {{ /if }}
+            {{ /nav:main_nav }}
+        </ul>
+        <div class="mob-nav flex lg:hidden items-center" x-on:click="navOpen = ! navOpen">
+            <div class="hamburger hamburger--spin" style="z-index: 9999999;" x-bind:class="navOpen ? 'is-active' : ''">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+<div class="mobile-menu fixed top-0 right-0 left-0 bg-black text-white z-40 transition-all duration-500" x-bind:class="navOpen ? 'bottom-0 preventScroll' : 'bottom-[100%]'" x-cloak>
+    <div class="overflow-y-scroll w-screen h-full max-h-screen">
+        <div class="spacer"></div>
+        <ul class="links space-y-7 px-6 pb-10">
+        {{ nav:main_nav }}
+            {{ if children }}
+            <li class="" x-data="{subnav: false}">
+                <div class="flex justify-between" x-on:click="subnav = ! subnav">
+                    {{ title }}
+                    <svg class="transition" x-bind:class="subnav ? 'rotate-180' : ''"
+                        xmlns="http://www.w3.org/2000/svg" width="20" height="10.909" viewBox="0 0 20 10.909">
+                        <path id="Down_Arrow_3_" d="M30,50.909a.906.906,0,0,1-.643-.266l-9.091-9.091a.909.909,0,0,1,1.285-1.285L30,48.714l8.448-8.448a.909.909,0,0,1,1.285,1.285l-9.091,9.091A.906.906,0,0,1,30,50.909Z" transform="translate(-20 -40)" fill="#FFF"/>
+                    </svg>
+
+                </div>
+                <div class="mob-subnav" x-bind:class="subnav ? 'h-full max-h-[400px] visible' : 'h-0 invisible'">
+                    <div class="px-3 flex flex-col">
+                    {{ children }}
+                        <a href="{{ url }}" aria-label="{{ title }}" class= pt-5 x-on:click="navOpen = ! navOpen">{{ title }}</a>
+                    {{ /children }}
+                    </div>
+                </div>
+            </li>
+            {{ else }}
+            <li>
+                <a href="{{ url }}" aria-label="{{ title }}">{{ title }}</a>
+            </li>
+            {{ /if }}
+        {{ /nav:main_nav }}
+        </ul>
+    </div>
+</div>
+
+<div class="spacer"></div>
+
