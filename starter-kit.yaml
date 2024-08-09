@@ -1,6 +1,6 @@
 export_paths:
   - config/statamic/assets.php
-  - content/nagivation
+  - content/navigation
   - public/images
   - public/build
   - resources/blueprints
