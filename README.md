@@ -204,3 +204,24 @@ By default the site only has a pages collection and blueprint (lined to the page
 
 It is using the assets container and has image cache on (in config/statamic/assets)
 
+## Questions etc
+
+Drop us a big shout-out if you have any questions, comments, or concerns. We're always looking to improve our addons, so if you have any feature requests, we'd love to hear them.
+
+Also - check out our other addons!
+- [Alt Cookies Addon](https://github.com/alt-design/Alt-Cookies-Addon)
+- [Alt Redirect Addon](https://github.com/alt-design/Alt-Redirect-Addon)
+- [Alt Akismet Addon](https://github.com/alt-design/Alt-Akismet-Addon)
+- [Alt Inbound Addon](https://github.com/alt-design/Alt-Inbound-Addon)
+- [Alt Sitemap Addon](https://github.com/alt-design/Alt-Sitemap-Addon)
+- [Alt Password Protect Addon](https://github.com/alt-design/Alt-Password-Protect-Addon)
+
+## Postcardware
+
+Send us a postcard from your hometown if you like this addon. We love getting mail from other cool peeps!
+
+Alt Design  
+St Helens House  
+Derby  
+DE1 3EE  
+UK
