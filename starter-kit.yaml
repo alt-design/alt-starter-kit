@@ -1,5 +1,7 @@
 export_paths:
   - config/statamic/assets.php
+  - content/assets/assets.yaml
+  - content/collections/pages.yaml
   - content/navigation
   - public/images
   - public/build
