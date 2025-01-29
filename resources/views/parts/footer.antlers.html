@@ -23,14 +23,14 @@
 
                 {{ if contact_details:email }}
                 <div class="inline-flex font-semibold">
-                    E: <a href="mailto:{{ contact_details:email }}" class="ml-2 mb-6 font-normal">{{ contact_details:email }}</a>
+                    E: <a href="tel:{{ contact_details:email }}" class="ml-2 mb-6 font-normal">{{ contact_details:email }}</a>
                 </div>
                 {{ /if }}
                 {{ partial src="parts/social-links" }}
             </div>
 
             <div class="w-full lg:w-1/4 order-first lg:order-last mb-5 lg:mb-0">
-                <div class="footer-links flex flex-col lg:flex-row space-y-4 lg:space-y-0 justify-between ">
+                <div class="footer-links flex flex-col space-y-4">
                     {{ nav:footer_nav }}
                     <div class="">
                         <a href="{{ url }}">{{ title }}</a>
