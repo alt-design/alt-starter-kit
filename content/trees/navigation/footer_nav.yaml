@@ -1,10 +1,4 @@
 tree:
   -
     id: f692d8b9-f61b-4555-9503-71fded0b1b43
-    title: 'Footer Nav Link 1'
-  -
-    id: 828b7f5c-30d8-42d4-b595-922e3f397104
-    title: 'Footer Nav Link 2'
-  -
-    id: 24af978d-ff2a-49e0-9ee1-600a19fbf1a1
-    title: 'Footer Nav Link 3'
+    title: 'Footer Nav'
