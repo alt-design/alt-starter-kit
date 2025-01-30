@@ -23,7 +23,7 @@
 
                 {{ if contact_details:email }}
                 <div class="inline-flex font-semibold">
-                    E: <a href="mailto:{{ contact_details:email }}" class="ml-2 mb-6 font-normal">{{ contact_details:email }}</a>
+                    E: <a href="tel:{{ contact_details:email }}" class="ml-2 mb-6 font-normal">{{ contact_details:email }}</a>
                 </div>
                 {{ /if }}
                 {{ partial src="parts/social-links" }}
