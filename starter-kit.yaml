@@ -3,6 +3,8 @@ export_paths:
   - content/assets/assets.yaml
   - content/collections/pages.yaml
   - content/navigation
+  - content/trees/navigation
+  - content/globals/contact_details.yaml
   - public/images
   - public/build
   - resources/blueprints
