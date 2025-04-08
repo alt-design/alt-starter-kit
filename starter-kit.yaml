@@ -14,6 +14,7 @@ export_paths:
   - resources/js
   - resources/views
   - package.json
+  - vite.config.js
 dependencies:
   alt-design/alt-akismet: ^1.1
   alt-design/alt-cookies: ^1.1

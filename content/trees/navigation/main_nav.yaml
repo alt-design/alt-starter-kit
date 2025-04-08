@@ -4,8 +4,8 @@ tree:
     title: 'Main Nav'
   -
     id: 919be25c-5c3e-4cb0-93d6-6e19dd4aad7a
-    title: 'Dropdown'
+    title: Dropdown
     children:
       -
         id: eb4645ff-f086-455b-b7df-aa8523b9c869
-        title: 'Subnav'
+        title: Subnav
