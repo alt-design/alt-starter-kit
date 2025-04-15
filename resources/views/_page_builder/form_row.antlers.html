@@ -53,7 +53,7 @@
         <input type="text" class="hidden" aria-hidden="true" name="{{ honeypot ?? 'username' }}">
 
 
-        <div class="form-button flex gap-3 w-fit flex-col lg:flex-row {{ align }}">
+        <div class="form-button w-fit {{ button:align }}">
             {{ button }}
             {{ partial src="_parts/fieldsets/button" }}
             {{ /button }}
