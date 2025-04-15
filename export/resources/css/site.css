@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@import "./parts/hamburger.css";
+@import "./parts/form.css";
+@import "./parts/buttons.css";
+@import "./parts/glide.css";
+@import "./parts/wysiwyg.css";
+
+@theme{
+    --color-radio-fill: rgb(0, 0, 0);
+    --color-checkbox-fill: rgb(0, 0, 0);
+    --color-background-tint: rgba(0, 0, 0, 0.5)
+}
+
+[x-cloak] { display: none !important; }
+
+body:has(div.preventScroll){
+    overflow: hidden;
+    height: 100vh;
+}
+
+:root {
+    --navbar-height: 117px;
+}
+
+.spacer{
+    height: var(--navbar-height)
+}
+
+html {
+    scroll-padding-top: var(--navbar-height)
+}
+
+.h-screen-adj{
+    height: calc(100vh - var(--navbar-height));
+}
+
+.background-tint{
+    background-color: var(--color-background-tint);
+}
+
+
+
+
+
+
+

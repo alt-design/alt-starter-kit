@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {{ alt_seo:meta }}
+        {{ vite src="resources/js/site.js|resources/css/site.css" }}
+    </head>
+    <body class="alt_starter_kit page-{{ slug }} relative" x-data="{navOpen: false}">
+        {{ partial src="_parts/header"}}
+        {{ template_content }}
+        {{ partial src="_parts/footer"}}
+        {{ AltCookies:Toast }}
+    </body>
+</html>

@@ -1,0 +1,107 @@
+title: 'Page Builder'
+fields:
+  -
+    handle: page_builder
+    field:
+      type: replicator
+      display: 'Page Builder'
+      sets:
+        page_builder_set_group:
+          display: 'Page Builder Set Group'
+          sets:
+            header:
+              display: Header
+              fields:
+                -
+                  import: media
+                  prefix: header_
+                -
+                  handle: background_colour
+                  field:
+                    type: color
+                    display: 'Background Colour'
+                    width: 33
+                    instructions: 'Can be used instead of media in page headers'
+                -
+                  handle: height
+                  field:
+                    options:
+                      -
+                        key: full
+                        value: Full
+                      -
+                        key: half
+                        value: Half
+                    type: select
+                    display: Height
+                    width: 33
+                    default: half
+                    instructions: 'Full height for Hero or half height for Page Header'
+                -
+                  handle: background_tint
+                  field:
+                    type: toggle
+                    display: 'Background Tint'
+                    width: 33
+                    instructions: 'Toggle for tint set in css. Unrelated to Background Colour'
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: subtitle
+                  field:
+                    type: text
+                    display: Subtitle
+                -
+                  import: button
+                  prefix: header_
+            wysiwyg:
+              display: Wysiwyg
+              fields:
+                -
+                  import: wysiwyg
+            media:
+              display: Media
+              fields:
+                -
+                  import: media
+            two_column:
+              display: 'Two Column'
+              fields:
+                -
+                  import: wysiwyg
+                  prefix: left_
+                -
+                  import: wysiwyg
+                  prefix: right_
+                -
+                  handle: reverse_order_on_mobile
+                  field:
+                    type: toggle
+                    display: 'Reverse Order on Mobile'
+            form_row:
+              display: 'Form Row'
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: form
+                  field:
+                    max_items: 1
+                    type: form
+                    display: Form
+                -
+                  import: button
+                -
+                  handle: success_message
+                  field:
+                    type: group
+                    display: 'Success Message'
+                    fields:
+                      -
+                        import: wysiwyg

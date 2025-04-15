@@ -1,0 +1,47 @@
+.wysiwyg h1{
+    @apply text-5xl mb-2 font-semibold
+}
+
+.wysiwyg h2{
+    @apply text-4xl mb-2 font-semibold
+}
+
+.wysiwyg h3{
+    @apply text-3xl mb-2 font-semibold
+}
+
+.wysiwyg h4{
+    @apply text-2xl mb-2 font-semibold
+}
+
+.wysiwyg h5{
+    @apply text-xl mb-2 font-semibold
+}
+
+.wysiwyg h6{
+    @apply text-lg mb-2 font-semibold
+}
+
+.wysiwyg p{
+    @apply text-lg mb-8 leading-8
+}
+
+.wysiwyg ul:not(.glide__slides){
+    @apply list-disc ml-4 mb-8
+}
+
+.wysiwyg ol{
+    @apply list-decimal ml-4 mb-8
+}
+
+.wysiwyg li p{
+    @apply mb-0
+}
+
+.wysiwyg a{
+    @apply underline
+}
+
+.wysiwyg-button a{
+    @apply no-underline
+}
