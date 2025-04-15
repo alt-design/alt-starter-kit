@@ -9,39 +9,41 @@ fields:
         page_builder_set_group:
           display: 'Page Builder Set Group'
           sets:
-            hero:
-              display: Hero
+            header:
+              display: Header
               fields:
                 -
-                  handle: background_type
+                  import: media
+                  prefix: header_
+                -
+                  handle: background_colour
+                  field:
+                    type: color
+                    display: 'Background Colour'
+                    width: 33
+                    instructions: 'Can be used instead of media in page headers'
+                -
+                  handle: height
                   field:
                     options:
-                      image: Image
-                      video: Video
+                      -
+                        key: full
+                        value: Full
+                      -
+                        key: half
+                        value: Half
                     type: select
-                    display: 'Background Type'
-                -
-                  handle: gallery
-                  field:
-                    container: assets
-                    type: assets
-                    display: Gallery
-                    if:
-                      background_type: 'equals image'
-                -
-                  handle: video
-                  field:
-                    max_files: 1
-                    container: assets
-                    type: assets
-                    display: Video
-                    if:
-                      background_type: 'equals video'
+                    display: Height
+                    width: 33
+                    default: half
+                    instructions: 'Full height for Hero or half height for Page Header'
                 -
                   handle: background_tint
                   field:
                     type: toggle
                     display: 'Background Tint'
+                    width: 33
+                    instructions: 'Toggle for tint set in css. Unrelated to Background Colour'
                 -
                   handle: title
                   field:
@@ -54,153 +56,31 @@ fields:
                     display: Subtitle
                 -
                   import: button
-            page_header:
-              display: 'Page Header'
-              fields:
-                -
-                  handle: gallery
-                  field:
-                    max_files: 1
-                    container: assets
-                    type: assets
-                    display: Gallery
-                -
-                  handle: background_tint
-                  field:
-                    type: toggle
-                    display: 'Background Tint'
-                -
-                  handle: title
-                  field:
-                    type: text
-                    display: Title
-                -
-                  handle: subtitle
-                  field:
-                    type: text
-                    display: Subtitle
-                -
-                  import: button
+                  prefix: header_
             wysiwyg:
               display: Wysiwyg
               fields:
                 -
-                  handle: content
-                  field:
-                    remove_empty_nodes: false
-                    type: bard
-                    display: Content
-                    buttons:
-                      - h2
-                      - h3
-                      - h4
-                      - bold
-                      - italic
-                      - underline
-                      - unorderedlist
-                      - orderedlist
-                      - removeformat
-                      - quote
-                      - anchor
-                      - image
-                      - table
-                      - alignleft
-                      - aligncenter
-                      - alignright
-                      - alignjustify
-            full_width_image:
-              display: 'Full Width Image'
+                  import: wysiwyg
+            media:
+              display: Media
               fields:
                 -
-                  handle: image
-                  field:
-                    max_files: 1
-                    container: assets
-                    type: assets
-                    display: Image
+                  import: media
             two_column:
               display: 'Two Column'
               fields:
                 -
-                  handle: text
-                  field:
-                    buttons:
-                      - h2
-                      - h3
-                      - h4
-                      - bold
-                      - italic
-                      - underline
-                      - unorderedlist
-                      - orderedlist
-                      - removeformat
-                      - quote
-                      - anchor
-                      - image
-                      - table
-                      - alignleft
-                      - aligncenter
-                      - alignright
-                      - alignjustify
-                    remove_empty_nodes: false
-                    type: bard
-                    display: Text
+                  import: wysiwyg
+                  prefix: left_
                 -
-                  handle: image
-                  field:
-                    max_files: 1
-                    container: assets
-                    type: assets
-                    display: Image
+                  import: wysiwyg
+                  prefix: right_
                 -
-                  handle: swap_sides
+                  handle: reverse_order_on_mobile
                   field:
                     type: toggle
-                    display: 'Swap Sides'
-            three_column:
-              display: 'Three Column'
-              fields:
-                -
-                  handle: columns
-                  field:
-                    max_sets: 3
-                    type: replicator
-                    display: Columns
-                    sets:
-                      new_set_group:
-                        display: 'New Set Group'
-                        sets:
-                          column:
-                            display: Column
-                            fields:
-                              -
-                                handle: image
-                                field:
-                                  max_files: 1
-                                  container: assets
-                                  type: assets
-                                  display: Image
-                              -
-                                handle: title
-                                field:
-                                  type: text
-                                  display: Title
-                              -
-                                handle: content
-                                field:
-                                  type: textarea
-                                  display: Content
-                              -
-                                import: button
-            logo_row:
-              display: 'Logo Row'
-              fields:
-                -
-                  handle: logos
-                  field:
-                    container: assets
-                    type: assets
-                    display: Logos
+                    display: 'Reverse Order on Mobile'
             form_row:
               display: 'Form Row'
               fields:
@@ -215,3 +95,13 @@ fields:
                     max_items: 1
                     type: form
                     display: Form
+                -
+                  import: button
+                -
+                  handle: success_message
+                  field:
+                    type: group
+                    display: 'Success Message'
+                    fields:
+                      -
+                        import: wysiwyg

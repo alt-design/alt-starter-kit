@@ -1,0 +1,9 @@
+{{ if link }}
+<a href="{{ link }}"
+{{/if }}
+    <button class="button cursor-pointer  {{ style }} {{ size}}" {{ if onclick }} onclick="{{ onclick }}" {{ /if }}>
+    {{ text }}
+    </button>
+{{ if link }}
+</a>
+{{/if }}

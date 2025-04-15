@@ -1,0 +1,75 @@
+
+.form-field-container {
+    @apply mb-4
+}
+
+.form-field-container label {
+    @apply text-lg mb-2
+}
+
+.form-field input:not(.radio):not(.checkboxes), .form-field textarea {
+    @apply w-full p-2 border border-gray-300 placeholder-gray-300 outline-none
+}
+
+.checkboxes .form-field{
+    @apply space-x-5 cursor-pointer;
+
+    input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: 1px solid var(--color-checkbox-fill);
+        @apply h-[14px] w-[14px] outline-none relative mr-2;
+    }
+
+    input[type="checkbox"]:checked {
+        background-color: var(--color-checkbox-fill);
+        border-color: var(--color-checkbox-fill);
+    }
+
+    input[type="checkbox"]:checked::after {
+        content: '\2713';
+        font-size: 16px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+}
+
+.radio .form-field{
+    @apply space-x-5 cursor-pointer;
+
+    input[type="radio"] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: 1px solid var(--color-radio-fill);
+        @apply h-[14px] w-[14px] rounded-full outline-none relative mr-2;
+    }
+
+    input[type="radio"]:checked {
+        background: var(--color-radio-fill);
+        background: radial-gradient(circle, var(--color-radio-fill) 50%, rgba(255,255,255,1) 50%);
+    }
+}
+
+.form-dropdown-container{
+    @apply w-full p-2 border border-gray-300 cursor-pointer;
+    background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2024%2024%22%3E%3C!--%20Icon%20from%20Material%20Design%20Light%20by%20Pictogrammers%20-%20https%3A%2F%2Fgithub.com%2FTemplarian%2FMaterialDesignLight%2Fblob%2Fmaster%2FLICENSE.md%20--%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22m5.84%209.59l5.66%205.66l5.66-5.66l-.71-.7l-4.95%204.95l-4.95-4.95z%22%2F%3E%3C%2Fsvg%3E');
+    background-position: 99%;
+    background-repeat: no-repeat;
+}
+
+.form-dropdown-open{
+    @apply w-full bg-white border-r border-l border-b border-gray-300 absolute top-[100%] left-0 right-0 z-50 overflow-y-auto;
+}
+
+.form-dropdown-open div{
+    @apply w-full p-2 cursor-pointer z-[51] ;
+}
+
+.form-dropdown-open div:hover {
+    @apply bg-gray-200;
+}

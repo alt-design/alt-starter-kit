@@ -7,10 +7,10 @@
         {{ alt_seo:meta }}
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
     </head>
-    <body class="alt_starter_kit page-{{ slug }} relative" x-data="{navOpen: false, modalOpen: false}">
-        {{ partial src="parts/header"}}
+    <body class="alt_starter_kit page-{{ slug }} relative" x-data="{navOpen: false}">
+        {{ partial src="_parts/header"}}
         {{ template_content }}
-        {{ partial src="parts/footer"}}
+        {{ partial src="_parts/footer"}}
         {{ AltCookies:Toast }}
     </body>
 </html>

@@ -5,6 +5,7 @@ class Sliders {
      * Create Sliders
      */
     constructor () {
+        this.instances = []
         this.init()
     }
 
@@ -64,7 +65,14 @@ class Sliders {
 
             // Do the mount
             glide.mount({Controls, Autoplay, Swipe, Breakpoints})
+
+            this.instances.push(glide)
         }
+
+        // Refresh sliders on load to resize them properly
+        window.addEventListener('load', () => {
+            this.instances.forEach(instance => instance.update()) // fixes any resizing bugs
+        });
     }
 }
 

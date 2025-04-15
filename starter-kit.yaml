@@ -1,5 +1,6 @@
 export_paths:
   - config/statamic/assets.php
+  - config/statamic/static_caching.php
   - content/assets/assets.yaml
   - content/collections/pages.yaml
   - content/navigation
@@ -14,11 +15,12 @@ export_paths:
   - resources/js
   - resources/views
   - package.json
+  - vite.config.js
 dependencies:
-  alt-design/alt-akismet: ^1.1
+  alt-design/alt-akismet: ^1.2
   alt-design/alt-cookies: ^1.1
   alt-design/alt-inbound: ^1.1
   alt-design/alt-password-protect: ^1.2
-  alt-design/alt-redirect: ^1.3
-  alt-design/alt-seo: ^1.1
-  alt-design/alt-sitemap: ^1.2
+  alt-design/alt-redirect: ^1.6
+  alt-design/alt-seo: ^1.2
+  alt-design/alt-sitemap: ^1.3

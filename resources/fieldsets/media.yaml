@@ -1,0 +1,74 @@
+title: Media
+fields:
+  -
+    handle: media_type
+    field:
+      options:
+        -
+          key: image
+          value: Image
+        -
+          key: slider
+          value: Slider
+        -
+          key: video
+          value: 'Video Upload'
+        -
+          key: youtube
+          value: Youtube
+        -
+          key: none
+          value: None
+      type: select
+      display: 'Media Type'
+  -
+    handle: image
+    field:
+      container: assets
+      type: assets
+      display: Image
+      if:
+        media_type: 'equals image'
+      duplicate: false
+      max_files: 1
+  -
+    handle: slider
+    field:
+      type: group
+      display: Slider
+      duplicate: false
+      if:
+        media_type: 'equals slider'
+      fields:
+        -
+          import: slider
+  -
+    handle: video_upload
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Video Upload'
+      if:
+        media_type: 'equals video'
+  -
+    handle: autoplay
+    field:
+      type: toggle
+      display: Autoplay
+      instructions: '(Mutes video)'
+      if:
+        media_type: 'equals video'
+  -
+    handle: youtube_embed
+    field:
+      type: video
+      display: 'Youtube Embed'
+      if:
+        media_type: 'equals youtube'
+  -
+    handle: fill_container
+    field:
+      type: toggle
+      display: 'Fill Container'
+      instructions: 'Media is usually shown at a reduced width - to fill the container toggle on (full width media only)'

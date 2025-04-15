@@ -1,0 +1,45 @@
+title: Wysiwyg
+fields:
+  -
+    handle: wysiwyg
+    field:
+      buttons:
+        - h1
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+        - bold
+        - italic
+        - underline
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - table
+        - alignleft
+        - aligncenter
+        - alignright
+        - alignjustify
+      remove_empty_nodes: false
+      type: bard
+      display: Wysiwyg
+      sets:
+        sets:
+          display: Sets
+          sets:
+            button:
+              display: Button
+              icon: money-cashier-calculator
+              fields:
+                -
+                  import: button
+            media:
+              display: Media
+              icon: media-image-picture-gallery
+              fields:
+                -
+                  import: media
