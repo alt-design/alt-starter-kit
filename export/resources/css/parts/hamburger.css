@@ -1,0 +1,107 @@
+:root {
+    --color: #FFF;
+    --scrolled-color: #FFF; /* if changing on scroll */
+    --open-color: #FFF; /* if changing on open nav */
+    --height: 20px;
+    --width: 20px;
+    --line-weight: 2px;
+    --line-gap: -7px;
+    --hover-opacity: 1;
+    --border-radius: 10px;
+}
+
+.hamburger {
+    height: var(--height);
+    width: var(--width);
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+}
+
+.hamburger:hover, .hamburger.is-active:hover {
+    opacity: var(--hover-opacity);
+}
+
+.hamburger-box {
+    width: var(--width);
+    height: var(--height);
+    position: relative;
+}
+
+/* Lines */
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: var(--width);
+    height: var(--line-weight);
+    background-color: var(--color);
+    border-radius: var(--border-radius);
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}
+
+.hamburger-inner {
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.hamburger-inner::before {
+    top: var(--line-gap);
+    content: "";
+    display: block;
+}
+
+.hamburger-inner::after {
+    bottom: var(--line-gap);
+    content: "";
+    display: block;
+}
+
+/* Colors */
+/* When scrolled */
+.scrolled-nav .hamburger-inner,
+.scrolled-nav .hamburger-inner::before,
+.scrolled-nav .hamburger-inner::after {
+    background-color: var(--scrolled-color);
+}
+
+/* When nav opened  */
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background-color: var(--open-color);
+}
+
+/* Animation */
+.hamburger--spin .hamburger-inner {
+    transition-duration: 0.22s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin .hamburger-inner::before {
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+
+.hamburger--spin .hamburger-inner::after {
+    transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin.is-active .hamburger-inner {
+    transform: rotate(225deg);
+    transition-delay: 0.12s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger--spin.is-active .hamburger-inner::before {
+    top: 0;
+    opacity: 0;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+
+.hamburger--spin.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+    transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}

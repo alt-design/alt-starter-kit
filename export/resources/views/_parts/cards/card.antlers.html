@@ -1,0 +1,15 @@
+<div class="card w-full lg:w-1/3 flex flex-col p-10 bg-white justify-between group mb-5 lg:mb-0">
+    <div class="card-top">
+        <img class="w-full h-[250px] object-cover mb-4"
+             src="{{ glide :src='image:url' format='webp' width='600'}}" loading="lazy" alt="{{image:alt}}">
+        <h4 class="text-xl mb-2 font-semibold" >{{ title }}</h4>
+        <div class="wysiwyg">
+            <p>
+                {{ content}}
+            </p>
+        </div>
+    </div>
+    {{ if button_link }}
+    <a href="{{ button_link }}" class="button button-secondary">{{ button_text }}</a>
+    {{ /if }}
+</div>

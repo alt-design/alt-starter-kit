@@ -1,0 +1,43 @@
+{{ slider }}
+<div class="glide overflow-hidden h-full w-full max-w-full box-border
+relative {{ classes }}"
+     data-glide-options="{
+     startAt: 0,
+     type: '{{ type }}',
+     gap: {{ gap ?? 0 }},
+     perView: {{ per_view }},
+     {{ if per_view_mobile }}breakpoints: {1024: {perView: {{ per_view_mobile }} }} {{ /if }}
+     {{ if autoplay }}autoplay: {{ autoplay_speed }}000,{{ /if }}
+     }"
+     {{ if show_bullets }} data-glide-bullets="true" {{ /if }}>
+    <div class="glide__track h-full" data-glide-el="track">
+        <ul class="glide__slides h-full flex">
+            {{ images }}
+            <li class="glide__slide">
+                {{ if index == 0 }}
+                {{ partial src="_parts/components/image" }}
+                {{ else }}
+                {{ partial src="_parts/components/image" loading='lazy'  }}
+                {{ /if }}
+            </li>
+            {{ /images }}
+        </ul>
+
+        {{ if show_arrows }}
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left cursor-pointer z-20" data-glide-dir="<" aria-label="prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m14 18l-6-6l6-6l1.4 1.4l-4.6 4.6l4.6 4.6z"/></svg>
+            </button>
+            <button class="glide__arrow glide__arrow--right cursor-pointer z-20" data-glide-dir=">" aria-label="next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12.6 12L8 7.4L9.4 6l6 6l-6 6L8 16.6z"/></svg>
+            </button>
+        </div>
+        {{ /if }}
+
+        {{ if show_bullets }}
+        <div class="glide__bullets" data-glide-el="controls[nav]"></div>
+        {{ /if }}
+
+    </div>
+</div>
+{{ /slider }}

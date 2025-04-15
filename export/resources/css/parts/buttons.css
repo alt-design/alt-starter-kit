@@ -1,0 +1,28 @@
+
+.button.large{
+    @apply py-3 px-5 border w-full text-lg max-w-[200px] text-center
+}
+
+.button, .button.medium{
+    @apply py-2 px-4 border w-full text-base max-w-[200px] text-center
+}
+
+.button.small{
+    @apply py-1 px-3 border w-full text-sm max-w-[200px] text-center
+}
+
+.button.primary{
+    @apply bg-white text-black border-white
+}
+
+.button.primary:hover{
+    @apply bg-transparent text-white
+}
+
+.button.secondary{
+    @apply bg-black text-white border-black
+}
+
+.button.secondary:hover{
+    @apply bg-transparent text-black
+}

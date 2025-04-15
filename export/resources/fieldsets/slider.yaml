@@ -1,0 +1,80 @@
+title: Slider
+fields:
+  -
+    handle: slider
+    field:
+      type: group
+      display: Slider
+      fields:
+        -
+          handle: images
+          field:
+            container: assets
+            type: assets
+            display: Images
+        -
+          handle: type
+          field:
+            options:
+              -
+                key: slider
+                value: Slider
+              -
+                key: carousel
+                value: Carousel
+            type: select
+            display: Type
+            width: 25
+            default: slider
+        -
+          handle: gap
+          field:
+            type: integer
+            display: Gap
+            width: 25
+            append: px
+        -
+          handle: per_view
+          field:
+            type: integer
+            display: 'Per View'
+            width: 25
+            default: '1'
+        -
+          handle: per_view_mobile
+          field:
+            type: integer
+            display: 'Per View Mobile'
+            width: 25
+            placeholder: '(if different)'
+        -
+          handle: show_arrows
+          field:
+            type: toggle
+            display: 'Show Arrows'
+            width: 25
+        -
+          handle: show_bullets
+          field:
+            type: toggle
+            display: 'Show Bullets'
+            width: 25
+        -
+          handle: autoplay
+          field:
+            type: toggle
+            display: Autoplay
+            width: 25
+        -
+          handle: autoplay_speed
+          field:
+            type: integer
+            display: 'Autoplay Speed'
+            width: 25
+            append: s
+        -
+          handle: classes
+          field:
+            type: text
+            display: Classes
+            instructions: 'To help with styling'

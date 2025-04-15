@@ -1,0 +1,16 @@
+<div class="alt_center_modal fixed inset-0 z-[100] transition" x-transition x-cloak x-bind:class="{{ alpine }} ? '' : 'opacity-0 pointer-events-none z-0'">
+    <div class="overlay h-full w-full background-tint relative">
+        <div class="container mx-auto px-6 py-10 h-full flex items-center justify-center max-w-[750px] max-h-full">
+            <div class="w-full bg-white p-6 lg:p-12 overflow-scroll">
+                <h2 class="text-3xl mb-6 underline">{{ title }}</h2>
+                {{ slot }}
+            </div>
+        </div>
+
+        <button class="close-modal absolute top-5 right-5" aria-label="close modal" x-on:click="{{ alpine }} = ! {{ alpine }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                <path id="Path_621" data-name="Path 621" d="M11.832,10.136,19.62,2.348A1.3,1.3,0,0,0,17.788.516L10,8.3,2.212.516A1.3,1.3,0,0,0,.38,2.348l7.788,7.788L.38,17.924a1.3,1.3,0,1,0,1.832,1.832L10,11.968l7.788,7.788a1.3,1.3,0,1,0,1.832-1.832Zm0,0" transform="translate(0 -0.136)" fill="#fff"/>
+            </svg>
+        </button>
+    </div>
+</div>

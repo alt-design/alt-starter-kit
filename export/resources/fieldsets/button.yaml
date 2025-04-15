@@ -1,0 +1,85 @@
+title: Button
+fields:
+  -
+    handle: button
+    field:
+      type: group
+      display: Button
+      fields:
+        -
+          handle: text
+          field:
+            type: text
+            display: Text
+            width: 50
+        -
+          handle: style
+          field:
+            options:
+              -
+                key: primary
+                value: Primary
+              -
+                key: secondary
+                value: Secondary
+            type: select
+            display: Style
+            width: 50
+        -
+          handle: size
+          field:
+            options:
+              -
+                key: small
+                value: Small
+              -
+                key: medium
+                value: Medium
+              -
+                key: large
+                value: Large
+            type: select
+            display: Size
+            width: 50
+        -
+          handle: align
+          field:
+            options:
+              -
+                key: mr-auto
+                value: Left
+              -
+                key: mx-auto
+                value: Center
+              -
+                key: ml-auto
+                value: Right
+            type: select
+            display: Align
+            width: 50
+        -
+          handle: link
+          field:
+            type: link
+            display: Link
+            width: 50
+        -
+          handle: open_in_a_new_tab
+          field:
+            type: toggle
+            display: 'Open in a new tab'
+            width: 50
+        -
+          handle: advanced
+          field:
+            type: toggle
+            display: Advanced
+            width: 50
+        -
+          handle: onclick
+          field:
+            mode: javascript
+            type: code
+            display: OnClick
+            if:
+              advanced: 'equals true'

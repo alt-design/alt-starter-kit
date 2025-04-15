@@ -1,0 +1,25 @@
+<div class="alt_two_column my-10 lg:my-20">
+    <div class="container mx-auto px-6 flex {{ if reverse_order_on_mobile }} flex-wrap-reverse {{ else }} flex-wrap {{ /if }} lg:flex-nowrap justify-between items-center lg:space-x-20">
+
+        <div class="w-full lg:w-1/2 wysiwyg">
+            {{ left_wysiwyg }}
+            {{ partial src="_parts/fieldsets/wysiwyg"
+            desktop_size="50vw"
+            desktop_width="1250"
+            mobile_width="900"
+            loading="lazy" }}
+            {{ /left_wysiwyg }}
+        </div>
+
+        <div class="w-full lg:w-1/2 wysiwyg">
+            {{ right_wysiwyg }}
+            {{ partial src="_parts/fieldsets/wysiwyg"
+            desktop_size="50vw"
+            desktop_width="1250"
+            mobile_width="900"
+            loading="lazy" }}
+            {{ /right_wysiwyg }}
+        </div>
+
+    </div>
+</div>

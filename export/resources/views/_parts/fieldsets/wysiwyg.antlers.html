@@ -1,0 +1,17 @@
+{{ if type == "text" }}
+<div class="text">
+    {{ text }}
+</div>
+
+{{ elseif type == "button" }}
+{{ button }}
+<div class="wysiwyg-button flex gap-3 w-fit flex-col lg:flex-row {{ align }}">
+    {{ partial src="_parts/fieldsets/button" }}
+</div>
+{{ /button }}
+
+{{ elseif type == "media" }}
+<div class="wysiwyg-media my-10 lg:my-20">
+    {{ partial src="_parts/fieldsets/media" }}
+</div>
+{{ /if }}

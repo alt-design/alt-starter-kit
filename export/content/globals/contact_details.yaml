@@ -1,0 +1,35 @@
+title: 'Contact Details'
+data:
+  telephone: '01332 208733'
+  email: info@alt-design.net
+  address:
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'Alt Design'
+        -
+          type: hardBreak
+        -
+          type: text
+          text: 'St Helens House'
+        -
+          type: hardBreak
+        -
+          type: text
+          text: Derby
+        -
+          type: hardBreak
+        -
+          type: text
+          text: 'DE1 3EE'
+        -
+          type: hardBreak
+        -
+          type: text
+          text: UK
+  instagram: 'https://www.instagram.com/_we_are_alt/'
+  linkedin: 'https://uk.linkedin.com/company/alt-design-ltd'
+  icon_colour: '#ffffff'
+  icon_colour_on_hover: '#FF6600'

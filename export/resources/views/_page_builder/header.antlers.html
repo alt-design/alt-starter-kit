@@ -1,0 +1,38 @@
+<div class="alt_header relative h-screen-adj {{ if height == 'half' }} max-h-[500px] {{ /if }} w-screen overflow-hidden"
+     style="background-color: {{ background_colour }};">
+
+    {{ if media_type != 'none' }}
+    {{ partial
+    src="_parts/fieldsets/media"
+    :media_type="header_media_type"
+    :image="header_image"
+    :slider="header_slider"
+    :slider_options="header_slider_options"
+    :video_type="header_video_type"
+    :video_upload="header_video_upload"
+    :autoplay="header_autoplay"
+    :youtube_embed="header_youtube_embed"
+    desktop_size="100vw"
+    desktop_width="1800"
+    mobile_width="900"
+    loading="eager"
+    }}
+    {{ /if }}
+
+    <div class="absolute inset-0 {{ if background_tint }} background-tint {{ /if }}">
+        <div class="container mx-auto px-6 py-10 flex flex-col justify-end lg:justify-center text-white h-full w-full">
+            <h1 class="text-6xl mb-4">{{ title }}</h1>
+            {{ if subtitle}}
+            <p class="text-2xl mb-6">{{ subtitle }}</p>
+            {{ /if }}
+
+            {{ if header_button:link }}
+            <div class="hero-button flex gap-3 w-fit flex-col lg:flex-row {{ hero_button:align }}">
+                {{ header_button }}
+                {{ partial src="_parts/fieldsets/button" }}
+                {{ /header_button }}
+            </div>
+            {{ /if }}
+        </div>
+    </div>
+</div>

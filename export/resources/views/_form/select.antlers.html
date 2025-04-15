@@ -1,0 +1,25 @@
+<div class="form-field-container {{ type }}">
+    <label>
+        {{ display }}
+        {{ if validate | contains:required }}<sup>*</sup> {{ /if }}
+    </label>
+    <div class="w-full relative" x-data="{ answer: '', open:false }">
+        <div @click="open = ! open" class="form-dropdown-container">
+            <div class="" x-text="answer ? answer : 'Please Select'"></div>
+        </div>
+        <div x-cloak x-show="open" @click.away="open = false" class="form-dropdown-open">
+            <div class="" @click="answer = ''; open = false">
+                Please select
+            </div>
+            {{ foreach:options as="option|label" }}
+            <div class="" @click="answer = {{ option }}; open = false">
+                {{ label !== null ? label : option }}
+            </div>
+            {{ /foreach:options }}
+        </div>
+        <input type="hidden" name="{{ name }}" x-model="answer" class="hidden">
+    </div>
+    {{ if error }}
+    <p class="text-gray-500">{{ error }}</p>
+    {{ /if }}
+</div>

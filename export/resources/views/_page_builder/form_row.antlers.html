@@ -1,0 +1,67 @@
+<div class="alt_form_row my-10 lg:my-20">
+    <div class="container mx-auto px-6 max-w-[1000px]">
+        {{ if title }}
+        <h2 class="text-4xl mb-8">{{ title }}</h2>
+        {{ /if }}
+        {{ nocache }}
+        {{ form:create in="{ form:handle }" }}
+
+        {{ if errors }}
+        <div class="errors py-4 text-red-600">
+            {{ errors }}
+            {{ value }}<br>
+            {{ /errors }}
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.querySelector('.errors').scrollIntoView({ behavior: 'smooth' });
+            });
+        </script>
+        {{ /if }}
+
+        {{ if success }}
+        <div id="success" class="py-4 wysiwyg">
+            {{ success_message:wysiwyg }}
+            {{ partial src="_parts/fieldsets/wysiwyg" }}
+            {{ /success_message:wysiwyg }}
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('success').scrollIntoView({ behavior: 'smooth' });
+            });
+        </script>
+        {{ else }}
+
+        {{ fields }}
+        {{ if type == "select" }}
+            {{ partial src='_form/select' }}
+        {{ else }}
+        <div class="form-field-container {{ type }}">
+            <label>
+                {{ display }}
+                {{ if validate | contains:required }}<sup>*</sup> {{ /if }}
+
+            <div class="form-field">{{ field }}</div>
+            </label>
+            {{ if error }}
+            <p class="text-gray-500">{{ error }}</p>
+            {{ /if }}
+        </div>
+        {{ /if }}
+        {{ /fields }}
+
+        <input type="text" class="hidden" aria-hidden="true" name="{{ honeypot ?? 'username' }}">
+
+
+        <div class="form-button flex gap-3 w-fit flex-col lg:flex-row {{ align }}">
+            {{ button }}
+            {{ partial src="_parts/fieldsets/button" }}
+            {{ /button }}
+        </div>
+
+        {{ /if }}
+
+        {{ /form:create }}
+        {{ /nocache }}
+    </div>
+</div>

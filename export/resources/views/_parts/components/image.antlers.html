@@ -1,0 +1,12 @@
+<picture>
+    <source
+        type="image/webp"
+        srcset="{{ glide :src='url' format='webp' :width='mobile_width' }} {{ mobile_width }}w,
+                {{ glide :src='url' format='webp' :width='desktop_width' }} {{ desktop_width }}w"
+        sizes="(min-width: 1024px) {{ desktop_size }}, 100vw"
+    >
+    <img src="{{ glide :src='url' :width='desktop_width' }}"
+         alt="{{ alt }}"
+         class="w-full h-full object-cover"
+         loading="{{ loading }}">
+</picture>
