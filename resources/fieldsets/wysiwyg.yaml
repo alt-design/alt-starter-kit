@@ -43,3 +43,8 @@ fields:
               fields:
                 -
                   import: media
+  -
+    handle: colour
+    field:
+      type: color
+      display: Colour

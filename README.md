@@ -101,6 +101,14 @@ loading="lazy" }}
 
 ## Fieldsets
 
+### Heading
+- Text
+- H1 toggle (H2 if false but styled the same)
+- Colour
+- Size (small, medium, large - styled in site.css for simple customization)
+- Max width
+- Text Align (left, center, right)
+
 ### Button
 - Text 
 - Style dropdown (e.g. 'primary', 'secondary'). Style the classes in css and add the class names here for selection 
@@ -143,6 +151,7 @@ For page speed, sliders will have loading set to lazy on all slides, you can pas
   - Text (default)
   - Button (Fieldset above - fully customizable size/colour/alignment/link etc)
   - Media (Fieldset above - image/slider/video/youtube)
+- Colour Picker - for text colour
 
 ## Page Builder
 
@@ -151,7 +160,7 @@ For page speed, sliders will have loading set to lazy on all slides, you can pas
 - Background Colour - for headers with just a colour instead of media (set media to 'none')
 - Height ('full' Hero or 'half' Page Header)
 - Background Tint - independent to background colour - style the tint in css/site.css 
-- Title 
+- Heading (Fieldset above)
 - Subtitle 
 - Button (Fieldset above)
 
@@ -167,7 +176,7 @@ For page speed, sliders will have loading set to lazy on all slides, you can pas
 - Reverse Order on Mobile toggle
 
 ### Form Row
-- Title (optional)
+- Heading (Fieldset above) - optional
 - Form (selector)
 - Button (Fieldset above) to customize the submit button
 - Success Message wysiwyg

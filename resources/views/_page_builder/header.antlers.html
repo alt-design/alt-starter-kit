@@ -21,7 +21,8 @@
 
     <div class="absolute inset-0 {{ if background_tint }} background-tint {{ /if }}">
         <div class="container mx-auto px-6 py-10 flex flex-col justify-end lg:justify-center text-white h-full w-full">
-            <h1 class="text-6xl mb-4">{{ title }}</h1>
+            {{ partial src="_parts/fieldsets/heading" :text="header_text" :colour="header_colour" :size="header_size" :max_width="header_max_width" :h1="header_h1" :text_align="header_text_align" }}
+
             {{ if subtitle}}
             <p class="text-2xl mb-6">{{ subtitle }}</p>
             {{ /if }}

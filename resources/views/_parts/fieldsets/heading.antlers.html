@@ -1,0 +1,10 @@
+{{# For SEO #}}
+{{ if h1 }}
+{{ heading_tag = "h1" }}
+{{ else }}
+{{ heading_tag = "h2" }}
+{{ /if }}
+
+<{{ heading_tag }} class="font-bold text-pretty heading heading-{{ size }}" style="color: {{ colour }}; {{ if max_width }} max-width: {{ max_width }}px;{{ /if }} text-align: {{ text_align }}">
+{{ text }}
+</{{ heading_tag }}>
