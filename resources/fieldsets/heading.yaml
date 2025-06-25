@@ -1,0 +1,58 @@
+title: Heading
+fields:
+  -
+    handle: text
+    field:
+      type: text
+      display: Text
+  -
+    handle: h1
+    field:
+      type: toggle
+      display: H1
+      width: 33
+  -
+    handle: colour
+    field:
+      type: color
+      display: Colour
+      width: 33
+  -
+    handle: size
+    field:
+      options:
+        -
+          key: sm
+          value: Small
+        -
+          key: md
+          value: Medium
+        -
+          key: lg
+          value: Large
+      type: select
+      display: Size
+      width: 33
+  -
+    handle: max_width
+    field:
+      append: px
+      type: integer
+      display: 'Max Width'
+      width: 33
+  -
+    handle: text_align
+    field:
+      options:
+        -
+          key: left
+          value: Left
+        -
+          key: center
+          value: Center
+        -
+          key: right
+          value: Right
+      type: select
+      display: 'Text Align'
+      width: 33

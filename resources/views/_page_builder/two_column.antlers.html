@@ -4,6 +4,7 @@
         <div class="w-full lg:w-1/2 wysiwyg">
             {{ left_wysiwyg }}
             {{ partial src="_parts/fieldsets/wysiwyg"
+            :colour="left_colour"
             desktop_size="50vw"
             desktop_width="1250"
             mobile_width="900"
@@ -14,6 +15,7 @@
         <div class="w-full lg:w-1/2 wysiwyg">
             {{ right_wysiwyg }}
             {{ partial src="_parts/fieldsets/wysiwyg"
+            :colour="right_colour"
             desktop_size="50vw"
             desktop_width="1250"
             mobile_width="900"

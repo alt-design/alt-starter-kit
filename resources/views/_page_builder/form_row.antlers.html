@@ -1,8 +1,9 @@
 <div class="alt_form_row my-10 lg:my-20">
     <div class="container mx-auto px-6 max-w-[1000px]">
-        {{ if title }}
-        <h2 class="text-4xl mb-8">{{ title }}</h2>
+        {{ if form_text }}
+        {{ partial src="_parts/fieldsets/heading" :text="form_text" :colour="form_colour" :size="form_size" :max_width="form_max_width" :h1="form_h1" :text_align="form_text_align" }}
         {{ /if }}
+
         {{ nocache }}
         {{ form:create in="{ form:handle }" }}
 
@@ -53,7 +54,7 @@
         <input type="text" class="hidden" aria-hidden="true" name="{{ honeypot ?? 'username' }}">
 
 
-        <div class="form-button w-fit {{ button:align }}">
+        <div class="form-button flex gap-3 w-fit flex-col lg:flex-row {{ button:align }}">
             {{ button }}
             {{ partial src="_parts/fieldsets/button" }}
             {{ /button }}

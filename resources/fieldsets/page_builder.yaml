@@ -45,10 +45,8 @@ fields:
                     width: 33
                     instructions: 'Toggle for tint set in css. Unrelated to Background Colour'
                 -
-                  handle: title
-                  field:
-                    type: text
-                    display: Title
+                  import: heading
+                  prefix: header_
                 -
                   handle: subtitle
                   field:
@@ -85,10 +83,8 @@ fields:
               display: 'Form Row'
               fields:
                 -
-                  handle: title
-                  field:
-                    type: text
-                    display: Title
+                  import: heading
+                  prefix: form_
                 -
                   handle: form
                   field:

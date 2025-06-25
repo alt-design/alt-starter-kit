@@ -40,6 +40,17 @@ html {
 }
 
 
+.heading-sm{
+    @apply text-2xl lg:text-4xl
+}
+
+.heading-md{
+    @apply text-3xl lg:text-5xl
+}
+
+.heading-lg{
+    @apply text-4xl lg:text-6xl
+}
 
 
 
