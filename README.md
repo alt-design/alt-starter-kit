@@ -265,7 +265,6 @@ Drop us a big shout-out if you have any questions, comments, or concerns. We're 
 - [Alt Akismet Addon](https://github.com/alt-design/Alt-Akismet-Addon)
 - [Alt Inbound Addon](https://github.com/alt-design/Alt-Inbound-Addon)
 - [Alt Sitemap Addon](https://github.com/alt-design/Alt-Sitemap-Addon)
-- [Alt Password Protect Addon](https://github.com/alt-design/Alt-Password-Protect-Addon)
 - [Alt Google 2FA Addon](https://github.com/alt-design/Alt-Google-2fa-Addon)
 
 ## Postcardware
