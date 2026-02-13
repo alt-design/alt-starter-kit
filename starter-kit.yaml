@@ -6,6 +6,7 @@ export_paths:
   - content/navigation
   - content/trees/navigation
   - content/globals/contact_details.yaml
+  - content/globals/default
   - public/images
   - public/build
   - resources/blueprints

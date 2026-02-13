@@ -17,6 +17,10 @@ Contains Alpine.js so be sure to remove this (from composer.json and site.js) if
 - Partial views hidden from admin
 - Added basic styling for radio/checkboxes/selects on forms
 
+#### Statamic 6 compatibility
+- Globals data moved to content/globals/default/ (v6 structure – Statamic migrates automatically when upgrading from 5)
+- Example fieldtype and CP JS updated for Vue 3 / @statamic/cms (see comments in vite.config.js and cp.js to build CP assets)
+- Statamic 6 requires PHP 8.3+ and Laravel 12 – check Alt addons support v6 before upgrading
 
 ## Installation
 
