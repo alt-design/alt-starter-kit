@@ -17,7 +17,7 @@ export_paths:
   - package.json
   - vite.config.js
 dependencies:
-  alt-design/alt-akismet: ^1.2
+  alt-design/alt-akismet: ^2.0
   alt-design/alt-cookies: ^1.1
   alt-design/alt-inbound: ^2.0
   alt-design/alt-redirect: ^1.6
