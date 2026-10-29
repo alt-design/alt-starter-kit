@@ -245,6 +245,15 @@ The css only has some basic classes for
 
 It can all be edited but should have the basics there to make it easy to customise any site.
 
+## Dashboard
+The control panel dashboard comes with a default set of widgets, configured in `config/statamic/cp.php`:
+
+- A welcome banner with quick links to add a page, the main navigation, contact details and assets, plus a Developer support button linking to the Alt contact page. The banner view is `resources/views/_cp/welcome.blade.php` (prefixed with an underscore so it stays out of the page template picker), and each link only shows to users with permission for it.
+- Recently updated pages
+- Latest contact form enquiries
+
+The Developer support button and the Support link in the control panel header both use `support_url` in `config/statamic/cp.php`, which points to the Alt contact page with UTM parameters (`utm_source=alt_starter_kit`, `utm_medium=referral`, `utm_campaign=dev_support`). Override it with `STATAMIC_SUPPORT_URL` in .env if a site needs it to go elsewhere.
+
 ## Default Config Notes
 By default the site only has a pages collection and blueprint (lined to the pagebuilder). 
 
