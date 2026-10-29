@@ -252,7 +252,7 @@ The control panel dashboard comes with a default set of widgets, configured in `
 - Recently updated pages
 - Latest contact form enquiries
 
-The Support link in the control panel header also points to the Alt contact page. Override it with `STATAMIC_SUPPORT_URL` in .env if a site needs it to go elsewhere.
+The Developer support button and the Support link in the control panel header both use `support_url` in `config/statamic/cp.php`, which points to the Alt contact page with UTM parameters (`utm_source=alt_starter_kit`, `utm_medium=referral`, `utm_campaign=dev_support`). Override it with `STATAMIC_SUPPORT_URL` in .env if a site needs it to go elsewhere.
 
 ## Default Config Notes
 By default the site only has a pages collection and blueprint (lined to the pagebuilder). 

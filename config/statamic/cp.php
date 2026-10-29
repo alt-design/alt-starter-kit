@@ -110,7 +110,7 @@ return [
     |
     */
 
-    'support_url' => env('STATAMIC_SUPPORT_URL', 'https://alt-design.net/contact'),
+    'support_url' => env('STATAMIC_SUPPORT_URL', 'https://alt-design.net/contact?utm_source=alt_starter_kit&utm_medium=referral&utm_campaign=dev_support'),
 
     /*
     |--------------------------------------------------------------------------

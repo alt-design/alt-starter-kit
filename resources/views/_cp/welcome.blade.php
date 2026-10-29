@@ -21,6 +21,6 @@
         @can('view assets assets')
             <ui-button href="{{ cp_route('assets.browse.show', 'assets') }}" text="Assets" icon="assets"></ui-button>
         @endcan
-        <ui-button href="https://alt-design.net/contact" target="_blank" text="Developer support" icon="support" variant="ghost"></ui-button>
+        <ui-button href="{{ config('statamic.cp.support_url') }}" target="_blank" text="Developer support" icon="support" variant="ghost"></ui-button>
     </div>
 </ui-card>
