@@ -1,5 +1,6 @@
 export_paths:
   - config/statamic/assets.php
+  - config/statamic/cp.php
   - config/statamic/static_caching.php
   - content/assets/assets.yaml
   - content/collections/pages.yaml
