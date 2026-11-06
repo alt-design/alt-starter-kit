@@ -24,3 +24,20 @@ dependencies:
   alt-design/alt-redirect: ^1.6
   alt-design/alt-seo: ^1.2
   alt-design/alt-sitemap: ^1.3
+modules:
+  riffraff:
+    prompt: 'Install RiffRaff, which holds spam form submissions for review? It needs a RiffRaff account.'
+    dependencies:
+      alt-design/alt-riffraff: ^1.6
+  google_maps:
+    prompt: 'Install Alt Google Maps, a location fieldtype with map tags?'
+    dependencies:
+      alt-design/alt-google-maps: ^1.1
+  live_editor:
+    prompt: 'Install Alt Live Editor, for editing content by clicking it in Live Preview?'
+    dependencies:
+      alt-design/alt-live-editor: ^1.0
+  tabs:
+    prompt: 'Install Alt Tabs, for tabs inside Replicator, Bard, Grid and Group fields?'
+    dependencies:
+      alt-design/alt-tabs: ^1.0

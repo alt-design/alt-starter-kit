@@ -221,7 +221,20 @@ It takes in a  title, the alpine variable name and will `{{ slot }}` any content
 There is a basic 404 page with a link back to home.
 
 ## Alt Addons
-All Addons are included in the install
+These are always installed: Alt Akismet, Alt Cookies, Alt Inbound, Alt Redirect, Alt SEO and Alt Sitemap.
+
+The installer then asks about four optional ones, so a site only gets what it needs:
+
+| Addon | What it does | Setup |
+| --- | --- | --- |
+| [RiffRaff](https://github.com/alt-design/Alt-RiffRaff-Addon) | Holds spam form submissions for review | A [RiffRaff account](https://riff-raff.dev/register), then `php please riffraff:connect "Site name"` on the server |
+| [Alt Google Maps](https://github.com/alt-design/Alt-google-maps-addon) | A location fieldtype with map tags | `GOOGLE_MAPS_PROVIDER=osm` in .env, or `google` with a `GOOGLE_MAPS_API_KEY` |
+| [Alt Live Editor](https://github.com/alt-design/Alt-Live-Editor-Addon) | Edit content by clicking it in Live Preview | Wrap page builder rows in `{{ alt_live_editor:row }}` |
+| [Alt Tabs](https://github.com/alt-design/Alt-Tabs-Addon) | Tabs inside Replicator, Bard, Grid and Group fields | None |
+
+When the install finishes, it prints the setup steps for the addons that were installed. To add an optional addon later, `composer require` it.
+
+The addons with a control panel page are grouped under **Alt Tools** in the nav.
 
 `{{ alt_seo:meta }}` and `{{ AltCookies:Toast }}` are included in the layout.
 
@@ -269,12 +282,20 @@ Drop us a big shout-out if you have any questions, comments, or concerns. We're 
 - [Alt Starter Kit](https://statamic.com/starter-kits/alt-design/alt-starter-kit) 
 
 ### Addons
-- [Alt Cookies Addon](https://github.com/alt-design/Alt-Cookies-Addon)
-- [Alt Redirect Addon](https://github.com/alt-design/Alt-Redirect-Addon)
+- [Alt Admin Bar Addon](https://github.com/alt-design/Alt-Admin-Bar-Addon)
+- [Alt AI Addon](https://github.com/alt-design/Alt-AI-Addon)
 - [Alt Akismet Addon](https://github.com/alt-design/Alt-Akismet-Addon)
-- [Alt Inbound Addon](https://github.com/alt-design/Alt-Inbound-Addon)
-- [Alt Sitemap Addon](https://github.com/alt-design/Alt-Sitemap-Addon)
+- [Alt Cookies Addon](https://github.com/alt-design/Alt-Cookies-Addon)
 - [Alt Google 2FA Addon](https://github.com/alt-design/Alt-Google-2fa-Addon)
+- [Alt Google Maps Addon](https://github.com/alt-design/Alt-google-maps-addon)
+- [Alt Inbound Addon](https://github.com/alt-design/Alt-Inbound-Addon)
+- [Alt Live Editor Addon](https://github.com/alt-design/Alt-Live-Editor-Addon)
+- [Alt Password Protect Addon](https://github.com/alt-design/Alt-Password-Protect-Addon)
+- [Alt Redirect Addon](https://github.com/alt-design/Alt-Redirect-Addon)
+- [Alt SEO Addon](https://github.com/alt-design/Alt-SEO-Addon)
+- [Alt Sitemap Addon](https://github.com/alt-design/Alt-Sitemap-Addon)
+- [Alt Tabs Addon](https://github.com/alt-design/Alt-Tabs-Addon)
+- [RiffRaff Addon](https://github.com/alt-design/Alt-RiffRaff-Addon)
 
 ## Postcardware
 
